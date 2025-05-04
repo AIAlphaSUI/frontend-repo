@@ -1,0 +1,242 @@
+.dao-container {
+    padding: 120px 32px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .dao-tabs {
+    display: flex;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+  
+  .tab-button {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .tab-button.active {
+    color: #a099ff;
+  }
+  
+  .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4361EE, #a099ff);
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .tab-content {
+    min-height: 400px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .dao-container {
+      padding: 100px 16px 40px;
+    }
+    
+    .dao-tabs {
+      margin: 30px 0 15px;
+    }
+    
+    .tab-button {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Add these styles for the member table */
+
+.member-table-container {
+  margin: 15px 0;
+  overflow-x: auto;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.member-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.member-table th,
+.member-table td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.member-table th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  position: sticky;
+  top: 0;
+}
+
+.member-table tr:last-child td {
+  border-bottom: none;
+}
+
+.member-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.member-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.member-table .current-user {
+  background: rgba(67, 97, 238, 0.07);
+}
+
+.member-table .current-user:hover {
+  background: rgba(67, 97, 238, 0.1);
+}
+
+.table-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.copy-button {
+  background: rgba(67, 97, 238, 0.2);
+}
+
+.copy-button:hover {
+  background: rgba(67, 97, 238, 0.3);
+}
+
+.view-full-button {
+  margin-left: 5px;
+  background: rgba(0, 184, 148, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+}
+
+.view-full-button:hover {
+  background: rgba(0, 184, 148, 0.3);
+}
+
+.full-id-display {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.full-id-content {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 90%;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.full-id-content h3 {
+  margin: 0;
+  color: white;
+}
+
+.full-id-content code {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 6px;
+  display: block;
+  overflow-x: auto;
+  word-break: break-all;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.copy-full-btn, 
+.close-full-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.copy-full-btn {
+  background: rgba(67, 97, 238, 0.7);
+  color: white;
+}
+
+.close-full-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.copy-full-btn:hover {
+  background: rgba(67, 97, 238, 0.9);
+}
+
+.close-full-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 600px) {
+  .member-table th,
+  .member-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  
+  .action-button {
+    padding: 4px 8px;
+  }
+}

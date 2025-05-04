@@ -1,0 +1,332 @@
+.top-agents-container {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #ffffff, #a099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(160, 153, 255, 0.3);
+  margin: 0 0 2rem 0;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(160, 153, 255, 0.1), rgba(160, 153, 255, 0.6), rgba(160, 153, 255, 0.1));
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Horizontal scrolling container */
+.agents-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+  margin: 0 -1rem;
+  position: relative;
+  cursor: grab;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.agents-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Agent cards */
+.agent-card {
+  flex: 0 0 auto;
+  width: 320px;
+  background: rgba(12, 12, 24, 0.85);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(160, 153, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.agent-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(160, 153, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(160, 153, 255, 0.2);
+}
+
+/* Agent header */
+.agent-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.agent-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(160, 153, 255, 0.1);
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 0 10px rgba(160, 153, 255, 0.2);
+}
+
+.agent-info {
+  flex-grow: 1;
+}
+
+.agent-info h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.agent-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.agent-type {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ml-ai {
+  background-color: rgba(67, 97, 238, 0.2);
+  color: #4361EE;
+  border: 1px solid rgba(67, 97, 238, 0.3);
+}
+
+.quant {
+  background-color: rgba(72, 219, 251, 0.2);
+  color: #48dbfb;
+  border: 1px solid rgba(72, 219, 251, 0.3);
+}
+
+.hybrid {
+  background-color: rgba(255, 159, 67, 0.2);
+  color: #ff9f43;
+  border: 1px solid rgba(255, 159, 67, 0.3);
+}
+
+/* Metrics section */
+.agent-metrics {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  align-items: center;
+}
+
+.metric-row:last-child {
+  margin-bottom: 0;
+}
+
+.metric-row.values {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.metric-period {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.positive {
+  color: #10b981;
+}
+
+.negative {
+  color: #ef4444;
+}
+
+/* Performance chart */
+.agent-chart {
+  height: 60px;
+  border-radius: 8px;
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.agent-chart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 100%);
+}
+
+.agent-chart::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.agent-chart.green {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.agent-chart.green::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,50 C20,45 40,20 60,35 C80,50 90,30 110,25 C130,20 150,10 180,5 L200,0 L200,60 L0,60 Z' fill='rgba(16, 185, 129, 0.15)'/%3E%3Cpath d='M0,50 C20,45 40,20 60,35 C80,50 90,30 110,25 C130,20 150,10 180,5' stroke='%2310b981' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+.agent-chart.blue {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.agent-chart.blue::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,40 C15,45 30,25 45,30 C60,35 75,20 90,25 C105,30 120,15 135,20 C150,25 165,15 180,10 L200,5 L200,60 L0,60 Z' fill='rgba(59, 130, 246, 0.15)'/%3E%3Cpath d='M0,40 C15,45 30,25 45,30 C60,35 75,20 90,25 C105,30 120,15 135,20 C150,25 165,15 180,10' stroke='%233b82f6' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+.agent-chart.orange {
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+.agent-chart.orange::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,35 C20,45 40,25 60,30 C80,35 100,15 120,20 C140,25 160,5 180,10 L200,15 L200,60 L0,60 Z' fill='rgba(249, 115, 22, 0.15)'/%3E%3Cpath d='M0,35 C20,45 40,25 60,30 C80,35 100,15 120,20 C140,25 160,5 180,10' stroke='%23f97316' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+.agent-chart.purple {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.agent-chart.purple::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,45 C20,40 40,15 60,25 C80,35 100,15 120,10 C140,5 160,15 180,5 L200,0 L200,60 L0,60 Z' fill='rgba(139, 92, 246, 0.15)'/%3E%3Cpath d='M0,45 C20,40 40,15 60,25 C80,35 100,15 120,10 C140,5 160,15 180,5' stroke='%238b5cf6' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+.agent-chart.cyan {
+  background-color: rgba(6, 182, 212, 0.1);
+}
+
+.agent-chart.cyan::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C15,35 30,20 45,25 C60,30 75,15 90,20 C105,25 120,10 135,15 C150,20 165,5 180,15 L200,25 L200,60 L0,60 Z' fill='rgba(6, 182, 212, 0.15)'/%3E%3Cpath d='M0,30 C15,35 30,20 45,25 C60,30 75,15 90,20 C105,25 120,10 135,15 C150,20 165,5 180,15' stroke='%2306b6d4' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+/* Portfolio section */
+.portfolio-section h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.portfolio-assets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.asset {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 0.35rem 0.6rem;
+}
+
+.asset-icon {
+  margin-right: 0.4rem;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buy token button */
+.buy-token-btn {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.75rem 0;
+  background: linear-gradient(135deg, #a099ff, #4361EE);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buy-token-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+  background: linear-gradient(135deg, #b1acff, #5472FF);
+}
+
+/* Scroll indicator dots */
+.scroll-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.scroll-dot.active {
+  background-color: rgba(160, 153, 255, 0.8);
+  transform: scale(1.3);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .agents-scroll-container {
+    padding-bottom: 1.5rem;
+  }
+  
+  .agent-card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .agent-card {
+    width: 260px;
+    padding: 1.25rem;
+  }
+}

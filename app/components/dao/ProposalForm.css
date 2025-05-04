@@ -1,0 +1,758 @@
+.proposals-container {
+  margin-top: 30px;
+}
+
+.proposals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.proposals-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn.active {
+  background: rgba(67, 97, 238, 0.2);
+  border-color: rgba(67, 97, 238, 0.5);
+  color: white;
+}
+
+.proposals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.proposal-card {
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.proposal-card.active {
+  border-left: 4px solid #4361EE;
+}
+
+.proposal-card.passed {
+  border-left: 4px solid #2ecc71;
+}
+
+.proposal-card.failed {
+  border-left: 4px solid #e74c3c;
+}
+
+.proposal-card.executed {
+  border-left: 4px solid #f39c12;
+}
+
+.proposal-header {
+  margin-bottom: 16px;
+}
+
+.proposal-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proposal-title-row h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.proposal-type {
+  display: inline-block;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+}
+
+.proposal-status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.proposal-status.active {
+  background: rgba(67, 97, 238, 0.2);
+  color: #4361EE;
+}
+
+.proposal-status.passed {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.proposal-status.failed {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+.proposal-status.executed {
+  background: rgba(243, 156, 18, 0.2);
+  color: #f39c12;
+}
+
+.proposal-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.proposal-config, .proposal-target {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.config-update, .target-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.config-update:last-child {
+  margin-bottom: 0;
+}
+
+.config-label, .target-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.config-update code, .proposal-target code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: white;
+  word-break: break-all;
+}
+
+.proposal-details {
+  margin-bottom: 20px;
+}
+
+.votes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.votes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.votes-label {
+  width: 60px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.votes-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.votes-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.votes-fill.for {
+  background: #2ecc71;
+}
+
+.votes-fill.against {
+  background: #e74c3c;
+}
+
+.votes-count {
+  width: 30px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.user-vote {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.vote-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.vote-badge.voted-for {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+}
+
+.vote-badge.voted-against {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+.proposal-voters {
+  margin-bottom: 20px;
+}
+
+.voters-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.voters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.voter {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+
+.voter:hover {
+  transform: translateY(-2px);
+}
+
+.voter.voted-for {
+  border-left: 2px solid #2ecc71;
+}
+
+.voter.voted-against {
+  border-left: 2px solid #e74c3c;
+}
+
+.voter-icon {
+  margin-right: 4px;
+}
+
+.voter.voted-for .voter-icon {
+  color: #2ecc71;
+}
+
+.voter.voted-against .voter-icon {
+  color: #e74c3c;
+}
+
+.voter-address {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.proposal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.meta-label {
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 4px;
+}
+
+.meta-value {
+  color: white;
+}
+
+.voting-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.vote-button {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vote-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.vote-button.for {
+  background: #2ecc71;
+  color: white;
+}
+
+.vote-button.for:hover:not(:disabled) {
+  background: #27ae60;
+}
+
+.vote-button.against {
+  background: #e74c3c;
+  color: white;
+}
+
+.vote-button.against:hover:not(:disabled) {
+  background: #c0392b;
+}
+
+.voting-notice {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 16px;
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.proposal-id {
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.proposal-id code {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.empty-state {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #4361EE;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .proposals-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .filters {
+    width: 100%;
+  }
+  
+  .filter-btn {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .proposal-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .proposal-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .voting-actions {
+    flex-direction: column;
+  }
+  
+  .voters-list {
+    max-height: 120px;
+    overflow-y: auto;
+  }
+}
+
+/* Add these styles to your existing CSS */
+
+.error-state {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  color: #e74c3c;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.refresh-button {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.4);
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.refresh-button:hover {
+  background: rgba(231, 76, 60, 0.3);
+}
+
+.no-members,
+.no-voters {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Add to your existing CSS */
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.create-proposal-btn {
+  background-color: #4361EE;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.create-proposal-btn:hover {
+  background-color: #3a56d4;
+  transform: translateY(-2px);
+}
+
+.address-with-copy {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+.voter {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.voter .address-with-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.voter .voter-address {
+  font-size: 11px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.proposal-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proposal-id .address-with-copy {
+  display: inline-flex;
+  margin-left: 5px;
+}
+
+.proposal-id code {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+/* Loading, error and empty state containers */
+.loading-container,
+.error-container,
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-state p {
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.empty-state p {
+  margin-bottom: 20px;
+}
+
+.refresh-button {
+  background: rgba(52, 152, 219, 0.7);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.refresh-button:hover {
+  background: rgba(52, 152, 219, 0.9);
+}
+
+.refresh-button:disabled {
+  background: rgba(52, 152, 219, 0.3);
+  cursor: not-allowed;
+}
+
+/* Improved header with refresh button */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Create proposal button when empty */
+.create-proposal-btn-centered {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.create-proposal-btn-centered:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Centered notices */
+.voting-notice.centered-notice {
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.voting-actions-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Current CSS enhancements */
+.proposals-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.proposals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.proposals-header h2 {
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn.active {
+  background: rgba(67, 97, 238, 0.7);
+  color: white;
+}
+
+.filter-btn:hover {
+  background: rgba(67, 97, 238, 0.4);
+}
+
+.create-proposal-btn {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.create-proposal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.create-proposal-btn:disabled {
+  background: linear-gradient(135deg, #6e8efb80, #a777e380);
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}

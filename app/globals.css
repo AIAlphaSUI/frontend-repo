@@ -47,3 +47,21 @@ body {
     ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Add these styles to your globals.css file */
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#__next, main {
+  min-height: 100%;
+  position: relative;
+}

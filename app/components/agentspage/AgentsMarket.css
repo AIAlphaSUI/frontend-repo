@@ -1,0 +1,53 @@
+.agents-market-container {
+    padding: 100px 24px 60px;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #ffffff, #a099ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .agent-rankings-wrapper,
+  .market-analysis-wrapper {
+    margin-top: 60px;
+  }
+  
+  .agents-content {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .filter-sort-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .agents-market-container {
+      padding: 80px 16px 40px;
+    }
+    
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    .agent-rankings-wrapper,
+    .market-analysis-wrapper {
+      margin-top: 40px;
+    }
+  }

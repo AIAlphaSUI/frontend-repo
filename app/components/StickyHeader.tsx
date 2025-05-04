@@ -71,7 +71,7 @@ const StickyHeader: React.FC = () => {
           />
           {userAccount?.address && (
             <>
-              <ActionStarryButton
+              {/* <ActionStarryButton
                 onClick={async () => {
                   const signTransaction = async () => {
                     const adapter = await getAdapter()
@@ -87,7 +87,7 @@ const StickyHeader: React.FC = () => {
                     )
                     const txid = await adapter.signAndExecuteTransactionBlock({
                       transactionBlock: transactionBlock as any,
-                      chain: 'sui:mainnet',
+                      chain: 'sui:testnet',
                       account: userAccount,
                     })
                     console.log(txid)
@@ -96,7 +96,7 @@ const StickyHeader: React.FC = () => {
                         label: 'Show Transaction ',
                         onClick: () => {
                           // Open url in a new tab
-                          window.open(`https://suiscan.xyz/mainnet/tx/${txid.digest}`, '_blank')
+                          window.open(`https://suiscan.xyz/testnet/tx/${txid.digest}`, '_blank')
                         },
                       },
                     })
@@ -110,7 +110,62 @@ const StickyHeader: React.FC = () => {
                   })
                 }}
                 name='Sign Transaction'
-              ></ActionStarryButton>
+              ></ActionStarryButton> */}
+
+            <ActionStarryButton
+              onClick={async () => {
+                const signTransaction = async () => {
+                  const adapter = await getAdapter()
+                  const transactionBlock = new TransactionBlock()
+                  
+                  // Package and object IDs
+                  const PACKAGE_ID = "0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4"
+                  const DAO_ID = "0x6788794b5349880caba8bbecdbdf78a7ef274a14c7a57c5b262f43a1fe246f9b"
+                  const MEMBER_CAP_ID = "0xddbd2a778729b15cef48e52c8afc646d22ba11f34f8c1b90fb1fc55f6999abbe"
+                  const CLOCK_ID = "0x6"
+                  // Replace with your actual proposal ID
+                  const PROPOSAL_ID = "0x2525259231dcbc4d6eefa58db86091f4613f7f508a6ca50226e884c0e42487ae" // You need to provide the actual proposal ID here
+                  
+                  // Call the vote function in the dao module
+                  transactionBlock.moveCall({
+                    target: `${PACKAGE_ID}::dao::vote`,
+                    arguments: [
+                      transactionBlock.object(MEMBER_CAP_ID),
+                      transactionBlock.object(DAO_ID),
+                      transactionBlock.pure(PROPOSAL_ID),
+                      transactionBlock.pure.bool(true), // Voting "true"
+                      transactionBlock.object(CLOCK_ID),
+                    ],
+                  })
+                  
+                  const txid = await adapter.signAndExecuteTransactionBlock({
+                    transactionBlock: transactionBlock,
+                    chain: 'sui:testnet',
+                    account: userAccount,
+                  })
+                  
+                  console.log(txid)
+                  toast.success('DAO Vote Submitted!', {
+                    action: {
+                      label: 'View Transaction',
+                      onClick: () => {
+                        window.open(`https://suiscan.xyz/testnet/tx/${txid.digest}`, '_blank')
+                      },
+                    },
+                  })
+                }
+                
+                toast.promise(signTransaction, {
+                  loading: 'Submitting DAO vote...',
+                  success: (_) => {
+                    return `Vote successfully submitted!`
+                  },
+                  error: 'Vote transaction failed or rejected',
+                })
+              }}
+              name='Submit DAO Vote'
+            ></ActionStarryButton>
+
               <ActionStarryButton
                 onClick={async () => {
                   const signMessage = async () => {

@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Socials: React.FC = () => {
   return (
-    <div className='fixed right-4 bottom-4 p-2 rounded-xl bg-white bg-opacity-40 backdrop-blur-md  w-[170px]'>
+    <div className='fixed right-4 bottom-4 p-2 rounded-xl bg-white bg-opacity-40 backdrop-blur-md w-[170px] z-50'>
       <div className='flex justify-center space-x-2'>
         <a
           href='https://twitter.com/Nightly_app'

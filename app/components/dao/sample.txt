@@ -1,0 +1,84 @@
+# to get info on DAO 
+
+curl --location 'https://fullnode.testnet.sui.io:443' \           
+--header 'Content-Type: application/json' \
+--data '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "sui_getObject",
+  "params": [
+    "0x6788794b5349880caba8bbecdbdf78a7ef274a14c7a57c5b262f43a1fe246f9b",
+    {
+      "showType": true,
+      "showOwner": true,
+      "showPreviousTransaction": true,
+      "showDisplay": false,
+      "showContent": true,
+      "showBcs": false,
+      "showStorageRebate": true
+    }
+  ]
+}'
+{"jsonrpc":"2.0","id":1,"result":{"data":{"objectId":"0x6788794b5349880caba8bbecdbdf78a7ef274a14c7a57c5b262f43a1fe246f9b","version":"349179004","digest":"34vbnGnXQJwGFdbLJFZGBcQ5TNK5wb4UehcRiBagRghU","type":"0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4::dao::DAOState","owner":{"Shared":{"initial_shared_version":349178997}},"previousTransaction":"HSARBbZvgP9ctDvLAM34Pxw9fP2fDGpGbyK45mqmdeFZ","storageRebate":"3853200","content":{"dataType":"moveObject","type":"0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4::dao::DAOState","hasPublicTransfer":false,"fields":{"admin":"0xd72e58941a8ea4bc27e5abcb4019b8435b1b81c5ecabe1c275041993ef6a0941","description":"A simple decentralized autonomous organization","id":{"id":"0x6788794b5349880caba8bbecdbdf78a7ef274a14c7a57c5b262f43a1fe246f9b"},"majority_threshold":"50","member_count":"7","members":{"type":"0x2::vec_set::VecSet<address>","fields":{"contents":["0xd72e58941a8ea4bc27e5abcb4019b8435b1b81c5ecabe1c275041993ef6a0941","0x016b0a955b512a0583d17277a9479ee53335c168b4bbc18baf315ffbfff7682b","0x392e243f2058ba120a91b1e627331b49740e0db4dde011c04b1b9dbbb847fe6b","0xfc132c402bb329d30f9f9ccd151f4f2a3ffa7e7481635351c1173308e8d25097","0xd9bb7b66ad318b5ca141277d38df71c64ccc7f50229586d178b3c4c371d7a0b8","0x097f9f786ed827c9293019a3e187390c1a3f5916b7df9ff2cbb5a570417de760","0x2a86b57a3dd5920158e40bbc29c4320ec5c9f03bdec3001f5300a2483d6bdc78"]}},"name":"Simple DAO","vote_duration":"604800"}}}}}%                     
+
+
+# to get all proposals from DAO
+
+# Query proposal creation events
+curl -X POST http://localhost:9000 \
+-H "Content-Type: application/json" \
+-d '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "suix_queryEvents",
+  "params": [
+    {
+      "MoveEventType": "'"$PACKAGE_ID"'::dao::ProposalCreatedEvent"
+    },
+    null,
+    5,
+    false
+  ]
+}'
+
+
+# use that proposal id and get query info of each proposal using   "method": "sui_getObject",
+curl --location 'https://fullnode.testnet.sui.io:443' \           
+--header 'Content-Type: application/json' \
+--data '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "sui_getObject",
+  "params": [
+    "0x2525259231dcbc4d6eefa58db86091f4613f7f508a6ca50226e884c0e42487ae",
+    {
+      "showType": true,
+      "showOwner": true,
+      "showPreviousTransaction": true,
+      "showDisplay": false,
+      "showContent": true,
+      "showBcs": false,
+      "showStorageRebate": true
+    }
+  ]
+}'
+{"jsonrpc":"2.0","id":1,"result":{"data":{"objectId":"0x2525259231dcbc4d6eefa58db86091f4613f7f508a6ca50226e884c0e42487ae","version":"411750964","digest":"7pCnf3Xwd523aQViZbg8yGy6CDrdT6XHCbF6XJnP5saK","type":"0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4::dao::Proposal","owner":{"Shared":{"initial_shared_version":411685266}},"previousTransaction":"3hefqynLhz4XtNAShW8gbXPF1d4WRQRxMauhAK3TRRaB","storageRebate":"3207200","content":{"dataType":"moveObject","type":"0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4::dao::Proposal","hasPublicTransfer":false,"fields":{"config_key":null,"config_value":null,"created_at":"1746277915700","creator":"0xd72e58941a8ea4bc27e5abcb4019b8435b1b81c5ecabe1c275041993ef6a0941","dao_id":"0x6788794b5349880caba8bbecdbdf78a7ef274a14c7a57c5b262f43a1fe246f9b","description":"Let's add this new member to our DAO","expires_at":"1746882715700","id":{"id":"0x2525259231dcbc4d6eefa58db86091f4613f7f508a6ca50226e884c0e42487ae"},"is_closed":false,"is_executed":false,"passed":false,"proposal_type":1,"target_address":"0x6088f3799e911bf33f6c7bc068c8acd5efc38d0f5598924740568d367295ce8b","title":"Add New Member","voters":{"type":"0x2::vec_map::VecMap<address, bool>","fields":{"contents":[{"type":"0x2::vec_map::Entry<address, bool>","fields":{"key":"0xd72e58941a8ea4bc27e5abcb4019b8435b1b81c5ecabe1c275041993ef6a0941","value":true}},{"type":"0x2::vec_map::Entry<address, bool>","fields":{"key":"0xfc132c402bb329d30f9f9ccd151f4f2a3ffa7e7481635351c1173308e8d25097","value":true}}]}},"votes_against":"0","votes_for":"3"}}}}}%    
+
+# get all member adds 
+
+# Query member addition events
+curl -X POST https://fullnode.testnet.sui.io:443 \
+-H "Content-Type: application/json" \
+-d '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "suix_queryEvents",
+  "params": [
+    {
+      "MoveEventType": "'"$PACKAGE_ID"'::dao::MemberAddedEvent"
+    },
+    null,
+    5,
+    false
+  ]
+}'

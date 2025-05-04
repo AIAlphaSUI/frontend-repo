@@ -1,0 +1,258 @@
+.portfolio-performance {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .performance-card {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Distribution Chart */
+  .distribution-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .chart-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+  }
+  
+  .donut-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .donut-segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(3.6deg * var(--start, 0)));
+    background: conic-gradient(
+      currentColor calc(3.6deg * var(--extent, 0)),
+      transparent 0
+    );
+    border-radius: 50%;
+  }
+  
+  .donut-segment.ml-ai {
+    color: #9c27b0;
+  }
+  
+  .donut-segment.quant {
+    color: #03a9f4;
+  }
+  
+  .donut-segment.hybrid {
+    color: #ff9800;
+  }
+  
+  .donut-hole {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    background: rgba(15, 23, 42, 0.8);
+    border-radius: 50%;
+  }
+  
+  .distribution-legend {
+    width: 100%;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
+  
+  .legend-color.ml-ai {
+    background-color: #9c27b0;
+  }
+  
+  .legend-color.quant {
+    background-color: #03a9f4;
+  }
+  
+  .legend-color.hybrid {
+    background-color: #ff9800;
+  }
+  
+  .legend-label {
+    flex: 1;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .legend-value {
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* Top Performers */
+  .top-performers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .performer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+  }
+  
+  .performer-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .performer-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .performer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .performer-info {
+    flex: 1;
+  }
+  
+  .performer-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: white;
+  }
+  
+  .performer-value {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .performer-change {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .performer-change.positive {
+    color: #2ecc71;
+  }
+  
+  .performer-change.negative {
+    color: #e74c3c;
+  }
+  
+  /* Recommended Actions */
+  .recommended-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .action-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+  }
+  
+  .action-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .action-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .action-icon.rebalance {
+    background: rgba(67, 97, 238, 0.2);
+    position: relative;
+  }
+  
+  .action-icon.rebalance::before {
+    content: "⟳";
+    color: #4361EE;
+    font-size: 22px;
+  }
+  
+  .action-icon.stake {
+    background: rgba(156, 39, 176, 0.2);
+    position: relative;
+  }
+  
+  .action-icon.stake::before {
+    content: "⇅";
+    color: #9c27b0;
+    font-size: 22px;
+  }
+  
+  .action-text h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: white;
+  }
+  
+  .action-text p {
+    font-size: 13px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  @media (max-width: 992px) {
+    .performance-card {
+      padding: 20px;
+    }
+    
+    .chart-container {
+      width: 160px;
+      height: 160px;
+    }
+  }

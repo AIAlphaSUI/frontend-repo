@@ -1,0 +1,275 @@
+.portfolio-holdings {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+  }
+  
+  .holdings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .holdings-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+  
+  .holdings-table {
+    width: 100%;
+  }
+  
+  .holdings-table-header {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 1.5fr 1fr;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .holdings-table-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .token-row {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 1.5fr 1fr;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+  }
+  
+  .token-row:last-child {
+    border-bottom: none;
+  }
+  
+  .th {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  }
+  
+  .th.sorted {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .th .sort-arrow {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    margin-left: 8px;
+  }
+  
+  .th.sorted.asc .sort-arrow:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.9);
+  }
+  
+  .th.sorted.desc .sort-arrow:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(255, 255, 255, 0.9);
+  }
+  
+  .td {
+    font-size: 15px;
+    color: white;
+  }
+  
+  .agent-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .agent-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .agent-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .agent-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .agent-metadata {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .agent-symbol {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .agent-type {
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .agent-type.ml-ai {
+    background-color: rgba(156, 39, 176, 0.2);
+    color: #e040fb;
+  }
+  
+  .agent-type.quant {
+    background-color: rgba(3, 169, 244, 0.2);
+    color: #03a9f4;
+  }
+  
+  .agent-type.hybrid {
+    background-color: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+  }
+  
+  .change.positive {
+    color: #2ecc71;
+    display: flex;
+    align-items: center;
+  }
+  
+  .change.negative {
+    color: #e74c3c;
+    display: flex;
+    align-items: center;
+  }
+  
+  .change-icon {
+    margin-right: 4px;
+    font-size: 12px;
+  }
+  
+  .price, .value {
+    font-weight: 600;
+  }
+  
+  .amount {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  .action-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .action-btn.buy {
+    background: rgba(67, 97, 238, 0.2);
+    color: #4361EE;
+  }
+  
+  .action-btn.buy:hover {
+    background: rgba(67, 97, 238, 0.3);
+  }
+  
+  .action-btn.sell {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .action-btn.sell:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  @media (max-width: 992px) {
+    .holdings-table-header,
+    .token-row {
+      grid-template-columns: 2.5fr 1fr 1fr 1fr 1.5fr;
+    }
+    
+    .th.actions,
+    .td.actions {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-holdings {
+      padding: 16px;
+    }
+    
+    .holdings-table-header,
+    .token-row {
+      grid-template-columns: 3fr 1fr 1fr 1fr;
+    }
+    
+    .th.amount,
+    .td.amount {
+      display: none;
+    }
+    
+    .agent-name {
+      font-size: 14px;
+    }
+    
+    .agent-logo {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .holdings-table-header,
+    .token-row {
+      grid-template-columns: 2fr 1fr 1fr;
+      padding: 16px 0;
+    }
+    
+    .th.change,
+    .td.change {
+      display: none;
+    }
+    
+    .agent-logo {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .agent-info {
+      gap: 10px;
+    }
+  }
