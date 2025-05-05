@@ -9,7 +9,7 @@ import PortfolioPerformance from '../components/portfolio/PortfolioPerformance'
 import Loading from '../components/portfolio/Loading'
 import { useState, useEffect } from 'react'
 import { getAdapter } from '../misc/adapter'
-import './portfolio.css'
+import './Portfolio.css'
 
 interface AgentToken {
   id: string
