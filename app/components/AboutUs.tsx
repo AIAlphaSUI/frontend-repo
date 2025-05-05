@@ -15,9 +15,9 @@ const AboutUs: React.FC = () => {
           <div className="about-text">
             <p className="lead-text">AI Alpha SUI is revolutionizing crypto trading by democratizing access to sophisticated AI-powered trading strategies on the SUI blockchain.</p>
             
-            <p>Founded by a team of researchers, traders, and AI specialists from HKUST Crypto Lab, we're building the bridge between advanced artificial intelligence and decentralized finance. Our platform enables anyone to create, deploy, or invest in AI trading agents without requiring deep technical expertise.</p>
+            <p>Founded by a team of researchers, traders, and AI specialists from HKUST Crypto Lab, we&apos;re building the bridge between advanced artificial intelligence and decentralized finance. Our platform enables anyone to create, deploy, or invest in AI trading agents without requiring deep technical expertise.</p>
             
-            <p>We believe the future of finance is both decentralized and intelligent. By bringing these worlds together, we're creating a more accessible, transparent, and efficient trading ecosystem for everyone—from seasoned quants to everyday investors.</p>
+            <p>We believe the future of finance is both decentralized and intelligent. By bringing these worlds together, we&apos;re creating a more accessible, transparent, and efficient trading ecosystem for everyone—from seasoned quants to everyday investors.</p>
             
             <div className="about-actions">
               <a href="/whitepaper.pdf" className="primary-button" target="_blank" rel="noopener noreferrer">
