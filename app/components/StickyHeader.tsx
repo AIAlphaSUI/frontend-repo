@@ -87,7 +87,7 @@ const StickyHeader: React.FC = () => {
                     )
                     const txid = await adapter.signAndExecuteTransactionBlock({
                       transactionBlock: transactionBlock as any,
-                      chain: 'sui:testnet',
+                      chain: 'sui:mainnet',
                       account: userAccount,
                     })
                     console.log(txid)
@@ -96,7 +96,7 @@ const StickyHeader: React.FC = () => {
                         label: 'Show Transaction ',
                         onClick: () => {
                           // Open url in a new tab
-                          window.open(`https://suiscan.xyz/testnet/tx/${txid.digest}`, '_blank')
+                          window.open(`https://suiscan.xyz/mainnet/tx/${txid.digest}`, '_blank')
                         },
                       },
                     })
@@ -119,8 +119,8 @@ const StickyHeader: React.FC = () => {
                   const transactionBlock = new TransactionBlock()
                   
                   // Package and object IDs
-                  const PACKAGE_ID = "0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4"
-                  const DAO_ID = "0x6788794b5349880caba8bbecdbdf78a7ef274a14c7a57c5b262f43a1fe246f9b"
+                  const PACKAGE_ID = "0xa5624847b0b4ed0ace977e773bd120987b617c5bbed83a095d818a8a3f363be4"
+                  const DAO_ID = "0xcb2e1caeb0b059cbace3301dafaa68f82ca3b6d6c1e7b5b6fef8b75e4ed693ea"
                   const MEMBER_CAP_ID = "0xddbd2a778729b15cef48e52c8afc646d22ba11f34f8c1b90fb1fc55f6999abbe"
                   const CLOCK_ID = "0x6"
                   // Replace with your actual proposal ID
@@ -140,7 +140,7 @@ const StickyHeader: React.FC = () => {
                   
                   const txid = await adapter.signAndExecuteTransactionBlock({
                     transactionBlock: transactionBlock,
-                    chain: 'sui:testnet',
+                    chain: 'sui:mainnet',
                     account: userAccount,
                   })
                   
@@ -149,7 +149,7 @@ const StickyHeader: React.FC = () => {
                     action: {
                       label: 'View Transaction',
                       onClick: () => {
-                        window.open(`https://suiscan.xyz/testnet/tx/${txid.digest}`, '_blank')
+                        window.open(`https://suiscan.xyz/mainnet/tx/${txid.digest}`, '_blank')
                       },
                     },
                   })

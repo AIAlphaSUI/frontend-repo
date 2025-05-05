@@ -116,7 +116,7 @@ const ProposalForm: React.FC<ProposalFormProps> = ({
     try {
       console.log(`Fetching member cap for user ${userAccount.address}, realIsMember: ${realIsMember}`);
       
-      const memberCapResponse = await fetch('https://fullnode.testnet.sui.io:443', {
+      const memberCapResponse = await fetch('https://fullnode.mainnet.sui.io:443', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -174,7 +174,7 @@ const ProposalForm: React.FC<ProposalFormProps> = ({
     try {
       // Use suix_queryEvents to get proposal events
       console.log("Fetching proposal events for package:", packageId);
-      const eventsResponse = await fetch('https://fullnode.testnet.sui.io:443', {
+      const eventsResponse = await fetch('https://fullnode.mainnet.sui.io:443', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -224,7 +224,7 @@ const ProposalForm: React.FC<ProposalFormProps> = ({
         proposalIds.map(async (proposalId: string) => {
           try {
             console.log(`Fetching proposal ${proposalId}`);
-            const response = await fetch('https://fullnode.testnet.sui.io:443', {
+            const response = await fetch('https://fullnode.mainnet.sui.io:443', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -382,7 +382,7 @@ const ProposalForm: React.FC<ProposalFormProps> = ({
       
       const txid = await adapter.signAndExecuteTransactionBlock({
         transactionBlock: transactionBlock,
-        chain: 'sui:testnet',
+        chain: 'sui:mainnet',
         account: userAccount,
       });
       
@@ -391,7 +391,7 @@ const ProposalForm: React.FC<ProposalFormProps> = ({
         action: {
           label: 'View Transaction',
           onClick: () => {
-            window.open(`https://suiscan.xyz/testnet/tx/${txid.digest}`, '_blank');
+            window.open(`https://suiscan.xyz/mainnet/tx/${txid.digest}`, '_blank');
           },
         },
       });

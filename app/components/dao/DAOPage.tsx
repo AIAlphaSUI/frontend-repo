@@ -10,8 +10,8 @@ import './DAOPage.css'
 
 // DAO Information
 const DAO_DETAILS = {
-  id: "0x6788794b5349880caba8bbecdbdf78a7ef274a14c7a57c5b262f43a1fe246f9b",
-  packageId: "0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4",
+  id: "0xcb2e1caeb0b059cbace3301dafaa68f82ca3b6d6c1e7b5b6fef8b75e4ed693ea",
+  packageId: "0xa5624847b0b4ed0ace977e773bd120987b617c5bbed83a095d818a8a3f363be4",
   name: "AI AlphaSUI DAO",
   description: "A decentralized governance system for the AI AlphaSUI platform."
 }

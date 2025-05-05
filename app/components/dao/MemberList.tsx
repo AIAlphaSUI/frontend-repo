@@ -26,7 +26,7 @@ const MemberList: React.FC<MemberListProps> = ({ daoId, packageId }) => {
       
       try {
         // Fetch member events from the blockchain
-        const response = await fetch('https://fullnode.testnet.sui.io:443', {
+        const response = await fetch('https://fullnode.mainnet.sui.io:443', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -209,7 +209,7 @@ const MemberList: React.FC<MemberListProps> = ({ daoId, packageId }) => {
                   <td>
                     <div className="member-actions">
                       <a 
-                        href={`https://suiscan.xyz/testnet/address/${member.address}`}
+                        href={`https://suiscan.xyz/mainnet/address/${member.address}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="view-explorer-btn"

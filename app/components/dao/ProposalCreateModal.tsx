@@ -131,7 +131,7 @@ const ProposalCreateModal: React.FC<ProposalCreateModalProps> = ({
       
       const txid = await adapter.signAndExecuteTransactionBlock({
         transactionBlock: transactionBlock,
-        chain: 'sui:testnet',
+        chain: 'sui:mainnet',
         account: account,
       });
       
@@ -140,7 +140,7 @@ const ProposalCreateModal: React.FC<ProposalCreateModalProps> = ({
         action: {
           label: 'View Transaction',
           onClick: () => {
-            window.open(`https://suiscan.xyz/testnet/tx/${txid.digest}`, '_blank');
+            window.open(`https://suiscan.xyz/mainnet/tx/${txid.digest}`, '_blank');
           },
         },
       });

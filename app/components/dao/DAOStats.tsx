@@ -63,7 +63,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
       setError(null)
       try {
         // Fetch DAO state from blockchain
-        const response = await fetch('https://fullnode.testnet.sui.io:443', {
+        const response = await fetch('https://fullnode.mainnet.sui.io:443', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -107,7 +107,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
           
           try {
             // Get all proposals for this DAO by querying events
-            const eventsResponse = await fetch('https://fullnode.testnet.sui.io:443', {
+            const eventsResponse = await fetch('https://fullnode.mainnet.sui.io:443', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -116,7 +116,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
                 method: "suix_queryEvents",
                 params: [
                   {
-                    MoveEventType: `0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4::dao::ProposalCreatedEvent`
+                    MoveEventType: `0xa5624847b0b4ed0ace977e773bd120987b617c5bbed83a095d818a8a3f363be4::dao::ProposalCreatedEvent`
                   },
                   null,
                   50, // Query up to 50 proposals
@@ -142,7 +142,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
               await Promise.all(
                 proposalIds.map(async (proposalId: string) => {
                   try {
-                    const response = await fetch('https://fullnode.testnet.sui.io:443', {
+                    const response = await fetch('https://fullnode.mainnet.sui.io:443', {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({
@@ -221,7 +221,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
     
     const fetchMemberCap = async (address: string) => {
       try {
-        const memberCapResponse = await fetch('https://fullnode.testnet.sui.io:443', {
+        const memberCapResponse = await fetch('https://fullnode.mainnet.sui.io:443', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -236,7 +236,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
                 filter: {
                   MatchAll: [
                     {
-                      StructType: "0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4::dao::MemberCap"
+                      StructType: "0xa5624847b0b4ed0ace977e773bd120987b617c5bbed83a095d818a8a3f363be4::dao::MemberCap"
                     },
                     {
                       AddressOwner: address
@@ -448,7 +448,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
         <ProposalCreateModal
           onClose={() => setShowCreateModal(false)}
           onProposalCreated={handleProposalCreated}
-          packageId="0xd330193f38414dcdb20fe729c8a9cc107d9232453c021f8b3620201335292ec4"
+          packageId="0xa5624847b0b4ed0ace977e773bd120987b617c5bbed83a095d818a8a3f363be4"
           daoId={daoId}
           memberCapId={memberCapId}
           account={account}
