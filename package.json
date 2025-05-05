@@ -5,6 +5,9 @@
   "author": "Nightly Labs",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
