@@ -95,6 +95,17 @@ const Team: React.FC = () => {
       }
     },
     {
+      name: "Ryan",
+      role: "Crypto BD (Trading & Exchanges)",
+      bio: "Crypto Enthusiast, Airdrop Farmer and Memecoin Shiller.",
+      avatar: "🐐",
+      social: {
+        twitter: "https://x.com/ryanhoyingho",
+        linkedin: "https://www.linkedin.com/in/ryan-ying-ho-ho-912781351?trk=contact-info",
+        github: "https://github.com/hryh"
+      }
+    },
+    {
       name: "Kani Chen",
       role: "Advisor (HKUST Crypto Lab)",
       bio: "HKUST Professor and Program Director of Financial Mathematics.",
