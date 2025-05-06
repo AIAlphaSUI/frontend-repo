@@ -20,7 +20,7 @@ const Team: React.FC = () => {
     {
       name: "Harsh",
       role: "Founder & Lead",
-      bio: "Mad Scientist - Former AI Researcher, Co-Founder AgentBaseHound (2 mill + marketcap), Lead AI Engineer at multiple projects. 5+ years in AI (Million + Start up Funding, Serving B2B B2G B2C), Crypto and Software Engineering Fanatic.",
+      bio: "Mad Scientist - Former AI Researcher, Co-Founder AgentBaseHound (2 mill + mc), Lead AI Engineer at multiple projects. 5+ years in AI (milli + Funding).",
       avatar: "🐉",
       social: {
         twitter: "https://twitter.com/drsophiachen",
@@ -41,7 +41,7 @@ const Team: React.FC = () => {
     },
     {
       name: "Moon",
-      role: "Crypto BD (Token Launches)",
+      role: "Crypto BD (Tokenomics & Launch)",
       bio: "Business Experience, Crypto Trading and Project Management experience.",
       avatar: "🌕",
       social: {
