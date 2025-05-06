@@ -347,7 +347,7 @@ const DAOStats: React.FC<DAOStatsProps> = ({
             ) : (
               <div className="guest-actions">
                 <div className="membership-status">Not a Member</div>
-                <ActionStarryButton onClick={requestMembership} name="Request Membership" />
+                {/* <ActionStarryButton onClick={requestMembership} name="Request Membership" /> */}
               </div>
             )}
           </div>

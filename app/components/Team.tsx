@@ -18,14 +18,14 @@ const Team: React.FC = () => {
   
   const teamMembers: TeamMember[] = [
     {
-      name: "Dr. Sophia Chen",
-      role: "Founder & CEO",
-      bio: "Former AI Research Lead at HKUST Crypto Lab. Ph.D. in Machine Learning with 10+ years in quantitative trading systems. Led breakthrough research in privacy-preserving ML for financial markets.",
-      avatar: "👩‍🔬",
+      name: "Harsh",
+      role: "Founder & Lead",
+      bio: "Mad Scientist - Former AI Researcher, Co-Founder AgentBaseHound (2 mill + marketcap), Lead AI Engineer at multiple projects. 5+ years in AI , Crypto and Software Engineering.",
+      avatar: "🐉",
       social: {
         twitter: "https://twitter.com/drsophiachen",
-        linkedin: "https://linkedin.com/in/sophiachen",
-        github: "https://github.com/sophia-ai"
+        linkedin: "https://x.com/Harshcodedragon",
+        github: "https://github.com/Harsh-Gill"
       }
     },
     {
