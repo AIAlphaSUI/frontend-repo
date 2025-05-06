@@ -9,7 +9,7 @@ const Socials: React.FC = () => {
     <div className='fixed right-4 bottom-4 p-2 rounded-xl bg-white bg-opacity-40 backdrop-blur-md w-[170px] z-50'>
       <div className='flex justify-center space-x-2'>
         <a
-          href='https://twitter.com/Nightly_app'
+          href='https://x.com/AIAlphaSui'
           target='_blank'
           rel='noopener noreferrer'
           className=' mt-[2px] transform transition-transform duration-300  hover:-rotate-12'
@@ -17,7 +17,7 @@ const Socials: React.FC = () => {
           <Image src={TwitterIcon} alt='Twitter' height={40} />
         </a>
         <a
-          href='https://discord.com/invite/7nhFHA6yZq'
+          href='https://discord.com/invite/USx895At'
           target='_blank'
           rel='noopener noreferrer'
           className=' transform transition-transform duration-300  hover:-rotate-12'
@@ -25,7 +25,7 @@ const Socials: React.FC = () => {
           <Image src={DiscordIcon} alt='Discord' height={45} />
         </a>
         <a
-          href='https://github.com/nightly-labs/sui-web3-template'
+          href='https://github.com/AIAlphaSUI'
           target='_blank'
           rel='noopener noreferrer'
           className=' mt-[2px] transform transition-transform duration-300  hover:-rotate-12'

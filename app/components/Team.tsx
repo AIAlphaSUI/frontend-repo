@@ -20,7 +20,7 @@ const Team: React.FC = () => {
     {
       name: "Harsh",
       role: "Founder & Lead",
-      bio: "Mad Scientist - Former AI Researcher, Co-Founder AgentBaseHound (2 mill + marketcap), Lead AI Engineer at multiple projects. 5+ years in AI , Crypto and Software Engineering.",
+      bio: "Mad Scientist - Former AI Researcher, Co-Founder AgentBaseHound (2 mill + marketcap), Lead AI Engineer at multiple projects. 5+ years in AI (Million + Start up Funding, Serving B2B B2G B2C), Crypto and Software Engineering Fanatic.",
       avatar: "🐉",
       social: {
         twitter: "https://twitter.com/drsophiachen",
@@ -29,42 +29,42 @@ const Team: React.FC = () => {
       }
     },
     {
-      name: "Michael Zhang",
-      role: "CTO",
-      bio: "Ex-Google AI engineer specialized in reinforcement learning. Built algorithmic trading systems for tier-1 hedge funds. Pioneered adaptive market models that outperformed traditional strategies by 23%.",
-      avatar: "👨‍💻",
+      name: "Yatharth",
+      role: "Crypto BD (Markets & Research)",
+      bio: "Finance Bro, Crypto VC Analyst Experience, Crypto Portfolio Management, Web3 Enthusiast.",
+      avatar: "💰",
       social: {
-        twitter: "https://twitter.com/michaelzhangtech",
-        linkedin: "https://linkedin.com/in/michaelzhang",
-        github: "https://github.com/mzhang-ai"
+        twitter: "https://x.com/y_maheshwariii",
+        linkedin: "https://www.linkedin.com/in/yatharth-maheshwari-694590218/",
+        github: "/"
       }
     },
     {
-      name: "Lin Wei",
-      role: "Head of Research",
-      bio: "Former quant at JPMorgan with expertise in statistical arbitrage. Ph.D. in Financial Engineering from HKUST. Published author on predictive modeling for crypto markets.",
-      avatar: "🧠",
+      name: "Moon",
+      role: "Crypto BD (Token Launches)",
+      bio: "Business Experience, Crypto Trading and Project Management experience.",
+      avatar: "🌕",
       social: {
-        twitter: "https://twitter.com/linweitrading",
-        linkedin: "https://linkedin.com/in/linwei",
-        github: "https://github.com/lin-quant"
+        twitter: "/",
+        linkedin: "/",
+        github: "/"
       }
     },
     {
-      name: "Raj Patel",
-      role: "Blockchain Lead",
-      bio: "Smart contract expert who led development at three successful DeFi projects. Early SUI contributor and Move language specialist. Created breakthrough on-chain execution mechanisms.",
-      avatar: "⛓️",
+      name: "Talha (طلحہ)",
+      role: "Quant Developer",
+      bio: "Experience in building quant trading algorithms for multiple markets. Formerly at multiple finance firms, specializing in building trading strategies.",
+      avatar: "📈",
       social: {
-        twitter: "https://twitter.com/rajpatel_web3",
-        linkedin: "https://linkedin.com/in/rajpatel",
-        github: "https://github.com/raj-move"
+        twitter: "/",
+        linkedin: "https://www.linkedin.com/in/talha-hameed-khan-167714203/",
+        github: "/"
       }
     },
     {
-      name: "Emma Johnson",
-      role: "Product Lead",
-      bio: "Former Product Director at Coinbase. Specializes in making complex financial products accessible to mainstream users. Built products used by over 2 million crypto traders.",
+      name: "Hitesh",
+      role: "Crypto BD (Blockchain & DeFi)",
+      bio: "Experience as an investment analyst at both an incubated crypto fund and crypto VC. Passionate about Web3 and DeFi. ",
       avatar: "🚀",
       social: {
         twitter: "https://twitter.com/emmaj_product",
@@ -73,60 +73,71 @@ const Team: React.FC = () => {
       }
     },
     {
-      name: "Dr. Kenji Tanaka",
-      role: "AI Research",
-      bio: "Specialist in natural language processing for financial sentiment analysis. Ph.D. from Tokyo University. Previously led quant research teams at major Asian trading firms.",
-      avatar: "🤖",
+      name: "Leo",
+      role: "AI Developer",
+      bio: "Tech Builder, Data Maniac, Machine Learning & AI Enthusiast, Crypto Lover",
+      avatar: "🦾",
       social: {
-        twitter: "https://twitter.com/drkenjitanaka",
-        linkedin: "https://linkedin.com/in/kenjitanaka",
-        github: "https://github.com/kenji-ai"
+        twitter: "/",
+        linkedin: "https://www.linkedin.com/in/liren-zhang-245700326/",
+        github: "https://github.com/leonidasiy/Projects"
       }
     },
     {
-      name: "Sarah Goldman",
-      role: "Trading Strategies",
-      bio: "15 years in institutional trading. Developed proprietary strategies that generated $140M+ in profit. Expert in options trading and volatility modeling for crypto markets.",
+      name: "Batman",
+      role: "Crypto & AI Developer",
+      bio: "Crypto developer at multiple projects, AI developer with experience in building AI models and trading algorithms.",
+      avatar: "🦾",
+      social: {
+        twitter: "/",
+        linkedin: "/",
+        github: "/"
+      }
+    },
+    {
+      name: "Kani Chen",
+      role: "Advisor (HKUST Crypto Lab)",
+      bio: "HKUST Professor and Program Director of Financial Mathematics.",
       avatar: "📊",
       social: {
-        twitter: "https://twitter.com/sarahgtrading",
-        linkedin: "https://linkedin.com/in/sarahgoldman",
-        github: "https://github.com/sarah-quant"
+        twitter: "/",
+        linkedin: "/",
+        github: "/"
       }
     },
-    {
-      name: "Alex Novak",
-      role: "Security Officer",
-      bio: "Cybersecurity expert with background in cryptography. Led security audits for 20+ DeFi protocols. Specializes in encryption systems for protecting proprietary trading algorithms.",
-      avatar: "🔒",
-      social: {
-        twitter: "https://twitter.com/alexnovaksec",
-        linkedin: "https://linkedin.com/in/alexnovak",
-        github: "https://github.com/alex-security"
-      }
-    },
-    {
-      name: "Maya Rodriguez",
-      role: "Community Lead",
-      bio: "Community building expert who grew three crypto projects from zero to 100K+ members. Specializes in educational content that makes complex trading concepts accessible.",
-      avatar: "🌐",
-      social: {
-        twitter: "https://twitter.com/mayacommunity",
-        linkedin: "https://linkedin.com/in/mayarodriguez",
-        github: "https://github.com/maya-community"
-      }
-    },
-    {
-      name: "Tom Li",
-      role: "Tokenomics Architect",
-      bio: "Economics Ph.D. with expertise in mechanism design. Developed innovative token models for several top-50 crypto projects. Former economics researcher at HKUST Crypto Lab.",
-      avatar: "💰",
-      social: {
-        twitter: "https://twitter.com/tomli_crypto",
-        linkedin: "https://linkedin.com/in/tomli",
-        github: "https://github.com/tom-tokenomics"
-      }
-    }
+    // {
+    //   name: "Alex Novak",
+    //   role: "Security Officer",
+    //   bio: "Cybersecurity expert with background in cryptography. Led security audits for 20+ DeFi protocols. Specializes in encryption systems for protecting proprietary trading algorithms.",
+    //   avatar: "🔒",
+    //   social: {
+    //     twitter: "https://twitter.com/alexnovaksec",
+    //     linkedin: "https://linkedin.com/in/alexnovak",
+    //     github: "https://github.com/alex-security"
+    //   }
+    // },
+    // {
+    //   name: "Maya Rodriguez",
+    //   role: "Community Lead",
+    //   bio: "Community building expert who grew three crypto projects from zero to 100K+ members. Specializes in educational content that makes complex trading concepts accessible.",
+    //   avatar: "🌐",
+    //   social: {
+    //     twitter: "https://twitter.com/mayacommunity",
+    //     linkedin: "https://linkedin.com/in/mayarodriguez",
+    //     github: "https://github.com/maya-community"
+    //   }
+    // },
+    // {
+    //   name: "Tom Li",
+    //   role: "Tokenomics Architect",
+    //   bio: "Economics Ph.D. with expertise in mechanism design. Developed innovative token models for several top-50 crypto projects. Former economics researcher at HKUST Crypto Lab.",
+    //   avatar: "💰",
+    //   social: {
+    //     twitter: "https://twitter.com/tomli_crypto",
+    //     linkedin: "https://linkedin.com/in/tomli",
+    //     github: "https://github.com/tom-tokenomics"
+    //   }
+    // }
   ];
   
   const handleCardClick = (index: number) => {
