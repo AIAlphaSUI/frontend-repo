@@ -86,12 +86,12 @@ const Team: React.FC = () => {
     {
       name: "Batman",
       role: "Crypto & AI Developer",
-      bio: "Crypto developer at multiple projects, AI developer with experience in building AI models and trading algorithms.",
-      avatar: "🦾",
+      bio: "PolyMath - Coding Wizard, Experience in developing softwares relating AI, Machine learning and blockchain.",
+      avatar: "🦇",
       social: {
         twitter: "/",
-        linkedin: "/",
-        github: "/"
+        linkedin: "https://www.linkedin.com/in/batman-aman/",
+        github: "https://github.com/theBatm4n"
       }
     },
     {
