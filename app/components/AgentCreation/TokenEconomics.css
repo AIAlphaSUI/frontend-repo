@@ -1,0 +1,237 @@
+.token-economics-container {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.token-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.form-section {
+  background: rgba(15, 15, 30, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.input-help {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.4rem;
+}
+
+.token-allocation-slider {
+  width: 100%;
+}
+
+.allocation-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.allocation-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.allocation-slider {
+  flex-grow: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  border-radius: 3px;
+}
+
+.allocation-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #4361EE;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.allocation-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #4361EE;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.allocation-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4361EE;
+  width: 50px;
+  text-align: right;
+}
+
+.allocation-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.token-distribution {
+  background: rgba(15, 15, 30, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.token-distribution h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.distribution-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.distribution-chart {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.distribution-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.distribution-segment.community {
+  background: linear-gradient(90deg, #4361EE, #6783ee);
+}
+
+.distribution-segment.creator {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.distribution-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legend-color.community {
+  background: #4361EE;
+}
+
+.legend-color.creator {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.legend-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.2rem;
+}
+
+.legend-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+.legend-supply {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.revenue-model {
+  background: rgba(15, 15, 30, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.revenue-model h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.revenue-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.revenue-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.revenue-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin-top: -0.2rem;
+}
+
+.revenue-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.revenue-details h4 {
+  font-size: 1rem;
+  margin: 0 0 0.4rem 0;
+  color: white;
+}
+
+.revenue-details p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+.token-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}

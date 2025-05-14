@@ -23,8 +23,8 @@ const Team: React.FC = () => {
       bio: "Mad Scientist - Former AI Researcher, Co-Founder AgentBaseHound (2 mill + mc), Lead AI Engineer at multiple projects. 5+ years in AI (milli + Funding).",
       avatar: "🐉",
       social: {
-        twitter: "https://twitter.com/drsophiachen",
-        linkedin: "https://x.com/Harshcodedragon",
+        twitter: "https://x.com/Harshcodedragon",
+        linkedin: "https://www.linkedin.com/in/harsh-gill-5b89641a3/",
         github: "https://github.com/Harsh-Gill"
       }
     },
@@ -116,17 +116,17 @@ const Team: React.FC = () => {
         github: "/"
       }
     },
-    // {
-    //   name: "Alex Novak",
-    //   role: "Security Officer",
-    //   bio: "Cybersecurity expert with background in cryptography. Led security audits for 20+ DeFi protocols. Specializes in encryption systems for protecting proprietary trading algorithms.",
-    //   avatar: "🔒",
-    //   social: {
-    //     twitter: "https://twitter.com/alexnovaksec",
-    //     linkedin: "https://linkedin.com/in/alexnovak",
-    //     github: "https://github.com/alex-security"
-    //   }
-    // },
+    {
+      name: "Aarov",
+      role: "AI Developer",
+      bio: "Blending deep learning expertise with financial strategy innovation through Python and machine learning.",
+      avatar: "👾",
+      social: {
+        twitter: "https://twitter.com/aarov7",
+        linkedin: "https://www.linkedin.com/in/aarovprasad?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/aarov7"
+      }
+    },
     // {
     //   name: "Maya Rodriguez",
     //   role: "Community Lead",
