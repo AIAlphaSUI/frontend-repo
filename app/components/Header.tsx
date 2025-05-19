@@ -50,6 +50,7 @@ const Header: React.FC = () => {
     { name: 'DAO', path: '/dao' },
     { name: 'Agents Market', path: '/agents' },
     { name: 'Portfolio', path: '/portfolio' },
+    { name: 'AI Analytics', path: '/analytics' }, // Added new analytics link
   ]
   
   return (
