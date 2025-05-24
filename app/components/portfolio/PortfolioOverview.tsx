@@ -44,7 +44,7 @@ const PortfolioOverview: React.FC<PortfolioOverviewProps> = ({ portfolioValue, a
         <div className="subtitle">Unique tokens</div>
       </div>
       
-      <div className="overview-card portfolio-actions">
+      {/* <div className="overview-card portfolio-actions">
         <h3>Quick Actions</h3>
         <div className="action-buttons">
           <button className="action-button buy">
@@ -54,7 +54,7 @@ const PortfolioOverview: React.FC<PortfolioOverviewProps> = ({ portfolioValue, a
             <span className="icon">↔</span> Swap Tokens
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

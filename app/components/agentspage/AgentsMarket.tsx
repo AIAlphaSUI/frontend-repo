@@ -13,8 +13,8 @@ const AgentsMarket: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'All' | 'ML/AI' | 'Quant' | 'Hybrid'>('All')
   const [sortBy, setSortBy] = useState<'ROI' | 'Market Cap' | 'Volume' | 'Holders'>('ROI')
   const [marketStats, setMarketStats] = useState({
-    totalMarketCap: '2.47T',
-    totalVolume: '94.8B',
+    totalMarketCap: '12K',
+    totalVolume: '94.8USD',
     btcDominance: '45.2%',
     fearGreedIndex: '72 - Greed'
   })

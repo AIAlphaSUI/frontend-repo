@@ -1,0 +1,201 @@
+.deployed-agents {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(15, 15, 30, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.agents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.agents-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.agents-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.agent-card {
+  background: rgba(24, 24, 48, 0.7);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.agent-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.agent-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.7), rgba(76, 201, 240, 0.7));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.agent-info {
+  flex-grow: 1;
+}
+
+.agent-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.agent-symbol {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+.agent-package-badge {
+  background: rgba(30, 30, 60, 0.6);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.agent-package-badge:hover {
+  background: rgba(30, 30, 60, 0.8);
+}
+
+.badge-icon {
+  font-size: 1rem;
+}
+
+.agent-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.detail-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.detail-value {
+  color: white;
+  font-weight: 500;
+}
+
+.agent-description {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  padding: 1rem;
+  background: rgba(30, 30, 60, 0.3);
+  border-radius: 8px;
+  border-left: 3px solid rgba(76, 201, 240, 0.5);
+}
+
+.agent-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-explorer-link, .manage-agent-link {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.view-explorer-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.view-explorer-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.manage-agent-link {
+  background: rgba(76, 201, 240, 0.2);
+  color: #4CC9F0;
+  border: 1px solid rgba(76, 201, 240, 0.3);
+}
+
+.manage-agent-link:hover {
+  background: rgba(76, 201, 240, 0.3);
+}
+
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.no-agents {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.create-agent-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.7), rgba(76, 201, 240, 0.7));
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.create-agent-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 201, 240, 0.3);
+}
+
+@media (max-width: 768px) {
+  .agents-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,15 +1,17 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Background from '../components/Background'
+import React, { useState, useEffect } from 'react'
+import { WalletAccount } from '@mysten/wallet-standard'
+import { getAdapter } from '../misc/adapter'
 import Header from '../components/Header'
+import Background from '../components/Background'
+import Loading from '../components/portfolio/Loading'
 import PortfolioOverview from '../components/portfolio/PortfolioOverview'
 import PortfolioHoldings from '../components/portfolio/PortfolioHoldings'
 import PortfolioPerformance from '../components/portfolio/PortfolioPerformance'
-import Loading from '../components/portfolio/Loading'
-import { useState, useEffect } from 'react'
-import { getAdapter } from '../misc/adapter'
-import './Portfolio.css'
+import DeployedAgents from '../components/portfolio/DeployedAgents'
+import ActiveStrategies from '../components/portfolio/ActiveStrategies'
+import './portfolio.css'
 
 interface AgentToken {
   id: string
@@ -239,6 +241,12 @@ export default function DashboardPage() {
                 portfolioValue={portfolioValue}
                 agentCount={agentTokens.length} 
               />
+              
+              {/* Display deployed agent tokens from your wallet */}
+              <DeployedAgents walletAddress={walletAddress} />
+              
+              {/* Display active trading strategies */}
+              <ActiveStrategies walletAddress={walletAddress} />
               
               <div className="portfolio-grid">
                 <div className="portfolio-main">

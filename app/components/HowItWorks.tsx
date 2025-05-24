@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './HowItWorks.css';
+import Link from 'next/link';
+
 
 const HowItWorks: React.FC = () => {
   const [activeJourney, setActiveJourney] = useState<number | null>(null);
@@ -116,8 +118,11 @@ const HowItWorks: React.FC = () => {
           </div>
           
           <div className="hero-buttons">
-            <button className="primary-hero-btn">Launch App</button>
-            <button className="secondary-hero-btn" onClick={handleDemoClick}>Watch Demo</button>
+// in the JSX where the button appears:
+<Link href="/agentcreation">
+  <button className="primary-hero-btn">Launch Trading Agent</button>
+</Link>            
+<button className="secondary-hero-btn" onClick={handleDemoClick}>Watch Demo</button>
           </div>
         </div>
         
