@@ -1,10 +1,6 @@
-# 🌟 Sui Web3 Template 🌟
+# 🌟 AlphaSUI: AI-Powered Trading Assistant 🌟
 
-Elevate your Sui blockchain development experience with this robust template powered by Next.js and integrated with [Nightly Connect](https://connect.nightly.app/docs/) for seamless wallet management. This template provides you with the core building blocks to jump-start your Sui project!
-
-![Discord](https://img.shields.io/discord/7nhFHA6yZq?color=7389D8&logo=discord&logoColor=ffffff)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+AlphaSUI is an advanced trading assistant for the SUI blockchain ecosystem, combining AI agent technology with comprehensive analytics and trading tools to provide an exceptional crypto trading experience.
 
 ---
 
@@ -14,51 +10,66 @@ Getting up and running is as easy as 1-2-3!
 
 ```bash
 # Clone the repo
-git clone https://github.com/nightly-labs/sui-web3-template.git
+git clone repo
 
 # Navigate to project directory
-cd sui-web3-template
-
+cd frontend
 # Install dependencies
-npm/yarn/pnpm/bun install
+yarn install
 
 # Start development server
-npm/yarn/pnpm/bun install
-
+yarn dev
 ```
 
-Now, open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see your blazing fast Sui app in action!
-
----
+### Now, open your browser and navigate to http://localhost:3000 to experience AlphaSUI!
 
 ## 🎨 Features
 
-- 🛠 **Next.js Framework**: Build your dApp using the versatile and powerful Next.js.
-- 🎨 **Tailwind**: A best-in-class CSS framework that turns styling into an art.
-- 🔐 **Nightly Connect Integration**: Seamless wallet selection integrated for easy transactions.
-- 📋 **Prebuilt Flows**: This template comes with prebuilt flows for wallet connection and sample requests.
-- 🤝 **Community Support**: Have questions? Join our [Discord community](https://discord.com/invite/7nhFHA6yZq).
+- 🤖 AI Trading Assistant: Powered by advanced language models with specialized tools for trading analysis.
+- 📊 On-Chain Analytics: Real-time data visualization for token distribution, concentration analysis, and whale tracking.
+- 🏎️ Algorithmic Trading: Set up and deploy automated trading strategies based on technical indicators.
+- 🔐 Wallet Integration: Connect your SUI wallet seamlessly for transactions and portfolio tracking.
+- 📱 Responsive Design: Beautiful interface that works on desktop and mobile devices.
+- 🔔 Real-time Alerts: Get notified of significant market movements and trading opportunities.
+- 📚 Core Components
+  AI Trading Assistant
+  Interact with our AI agent to analyze markets, execute trades, and learn about trading strategies. The assistant can:
 
----
+```
+Analyze token metrics and market sentiment
+Execute trades through connected wallets
+Provide educational content on trading strategies
+Backtesting strategies using historical data
+Analytics Dashboard
+```
 
-## 🖖 Contribute
+Our comprehensive analytics suite includes:
 
-Feel free to fork this repository and submit pull requests. To clone the repository and set up the development environment, you can follow the [Quick Start](#-quick-start) guide.
+```
+Token concentration analysis to identify potential risks
+Whale activity tracking
+Top trader performance metrics
+Price and volume visualization tools
+Algorithmic Trading Platform
+Create custom trading strategies or choose from pre-built options:
+- RSI-based trading
+- MACD strategy
+- Momentum trading
+- Automated buy/sell execution
+```
 
----
+## 🖖 Backend Services
 
-## 📬 Get in Touch
+The application is powered by three main backend components:
 
-If you have questions or just want to chat with developers, [join our Discord community](https://discord.com/invite/7nhFHA6yZq).
+### AI Agent Framework (Hound OS): Conversational AI with tool execution capabilities
 
----
+### Python Microservices: Algorithmic trading and backtesting engines
 
-## 🎉 Have Fun and Happy Coding!
+### JavaScript Microservices: Blockchain interaction services for the SUI ecosystem
 
-Use this template to build something incredible! Enjoy coding!
+For more information on the backend services, check the Backend README.
 
-## 🙏 Credits
+## 🎉 Have Fun and Happy Trading!
 
-This project wouldn't be possible without the help and contributions of:
-
-- [router-transitions](https://codesandbox.io/s/router-transitions-7kohn) for awesome 3d animation.
+Use AlphaSUI to elevate your trading experience on the SUI blockchain!
